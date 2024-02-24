@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("OAuth backend");
+  res.send("<h1>Hello</h1>");
 });
 
 app.use("/auth", authRoutes);
