@@ -1,6 +1,9 @@
 const axios = require("axios");
 
 async function googleAuth(req, res) {
+
+  res.send("<h1>Google callback route</h1>")
+
   const code = req.query.code;
   const clientID = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
