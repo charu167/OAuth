@@ -6,11 +6,11 @@ const authRoutes = require("./routes/auth.routes");
 const app = express();
 app.use(express.json());
 
-app.use("/auth", authRoutes);
+app.get("/", (req, res) => {
+  res.send("OAuth backend");
+});
 
-app.get('/', (req, res)=>{
-  res.send("OAuth backend")
-})
+app.use("/auth", authRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
