@@ -20,7 +20,7 @@ async function googleAuth(req, res) {
     const accessToken = tokenResponse.data.access_token;
 
     res.redirect(
-      `http://localhost:5173/callback/google/#access_token=${accessToken}`
+      `https://o-auth-client-blue.vercel.app/callback/google/#access_token=${accessToken}`
     );
   } catch (error) {
     res.send(error);
@@ -57,7 +57,7 @@ async function spotifyAuth(req, res) {
 
     // Redirect the user back to your frontend application with the access token
     res.redirect(
-      `http://localhost:5173/callback/spotify/#access_token=${accessToken}`
+      `https://o-auth-client-blue.vercel.app/callback/spotify/#access_token=${accessToken}`
     );
   } catch (error) {
     res.status(500).send(error);
